@@ -40,8 +40,61 @@
     </div>
 
   </div>
+  <div style="text-align:center">
+    <h2>Expanding Grid</h2>
+    <p>Click on the boxes below:</p>
+  </div>
+
+  <!-- Three columns -->
+  <div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:rgb(183, 196, 183);">
+      Box 1
+    </div>
+    <div class="column" onclick="openTab('b2');" style="background:rgb(144, 144, 239);">
+      Box 2
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:rgb(214, 206, 206);">
+      Box 3
+    </div>
+  </div>
+
+  <!-- Full-width columns: (hidden by default) -->
+  <div id="b1" class="containerTab" style="display:none;background:rgb(193, 211, 193)">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2>Box 1</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+  </div>
+
+  <div id="b2" class="containerTab" style="display:none;background:rgb(97, 97, 196)">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2>Box 2</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+  </div>
+
+  <div id="b3" class="containerTab" style="display:none;background:rgb(231, 176, 176)">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2>Box 3</h2>
+    <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+  </div>
+
+
+
+
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+     <!-- Js for the expanding grid -->
+    <!-- Hide all elements with class="containerTab", except for the one that matches the clickable grid column -->
+    <script>
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      } 
+
+    </script>
 </body>
 
 </html>
