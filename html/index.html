@@ -21,7 +21,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Bootstrap Theme</title>
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <title>Thao Nguyen's site</title>
   </head>
 
   <body>
@@ -115,17 +116,20 @@
               <h3>What Have I Built?</h3>
               <div class="row card-columns">
                 <div class="col">
-                  <div class="card" style="width: 20rem">
+                  <div class="card image" style="width: 20rem">
+                    <img class="image__img" src="images/snowM.webp" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
                     <div class="card-body bg-secondary">
-                      <h4 class="card-title">Project 1</h4>
+                      <h4 class="card-title image__title">Project 1</h4>
                       <h6 class="card-subtitle text-muted"></h6>
-                      <p class="card-text">
+                      <p class="card-text image__description">
                         This is my 1st project doing full CRUD on a multiple table database. User can look up film by title or description, delete movies that don't have a connection with other tables.
                         User can also a film to database with containing many fields like categories, languages, rating, list of actors, etc..
                       </p>
                       <a class="btn btn-outline-dark bg-white" href="http://54.183.118.245:8080/MVCFilmSite/"
                         >View Details</a
                       >
+                    </div>
                     </div>
                   </div>
                 </div>
